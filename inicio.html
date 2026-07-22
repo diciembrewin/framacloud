@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO OPTIMIZED TITLE -->
+    <title>Farmacloud - Pharmacy Management Software for Global Markets</title>
+    
+    <!-- OPTIMIZED META DESCRIPTION -->
+    <meta name="description" content="Farmacloud is the ultimate pharmacy management software. Optimize inventory, automate processes, manage sales and digitize your pharmacy business worldwide. Request a free demo!">
+    
+    <meta name="robots" content="index, follow">
+    
+    <!-- KEYWORDS -->
+    <meta name="keywords" content="pharmacy software, pharmacy management, digital pharmacy, inventory management, pharmacy system, Farmacloud, pharmacy POS">
+    
+    <!-- OPEN GRAPH FOR SOCIAL MEDIA -->
+    <meta property="og:title" content="Farmacloud - Pharmacy Management Software">
+    <meta property="og:description" content="Optimize your pharmacy with Farmacloud. Inventory management, sales and digital processes for pharmacies worldwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://farmacloud.com">
+    <meta property="og:image" content="https://farmacloud.com/img/og-image-global.jpg">
+    
+    <!-- STRUCTURED DATA (JSON-LD) - CRUCIAL FOR SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Farmacloud",
+      "operatingSystem": "Web, Windows, Mac, Linux",
+      "applicationCategory": "BusinessApplication",
+      "description": "Pharmacy management software for global markets. Optimize stock, sales and processes.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Farmacloud",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Corrientes 1234, Piso 8",
+          "addressLocality": "Buenos Aires",
+          "postalCode": "C1043AAN",
+          "addressCountry": "AR"
+        }
+      }
+    }
+    </script>
+    
+    <!-- FONT AWESOME FOR ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- GOOGLE FONTS FOR BETTER TYPOGRAPHY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0a2e4a;
+            --primary-light: #1a4a6a;
+            --secondary: #1f7a8c;
+            --secondary-light: #3a9aac;
+            --accent: #d9f0f2;
+            --light: #f6fafb;
+            --dark: #1a2633;
+            --white: #ffffff;
+            --border: #e1e8ec;
+            --text-light: #5d6b75;
+            --shadow: 0 4px 20px rgba(10, 46, 74, 0.12);
+            --shadow-hover: 0 8px 30px rgba(10, 46, 74, 0.2);
+            --gradient-primary: linear-gradient(135deg, #0a2e4a 0%, #1a4a6a 100%);
+            --gradient-hero: linear-gradient(135deg, rgba(10, 46, 74, 0.97), rgba(31, 122, 140, 0.92));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 0 0 8px 8px;
+            z-index: 10000;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: var(--white);
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .logo:hover {
+            opacity: 0.85;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--dark);
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--secondary);
+            color: var(--white) !important;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .hero {
+            background: var(--gradient-hero);
+            color: var(--white);
+            padding: 130px 0 110px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 700px;
+            height: 700px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: rgba(31, 122, 140, 0.15);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-badge i {
+            margin-right: 8px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 4.8rem);
+            line-height: 1.08;
+            margin-bottom: 25px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--accent);
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 680px;
+            opacity: 0.92;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 34px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+
+        .button-primary {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+        }
+
+        .button-secondary {
+            background: rgba(255,255,255,0.15);
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .button-secondary:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px);
+        }
+
+        .button-accent {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .button-accent:hover {
+            background: var(--secondary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(31, 122, 140, 0.4);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-stats .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .hero-stats .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 55px;
+        }
+
+        .section-header .section-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+            color: var(--primary);
+            font-size: 2.6rem;
+            margin-bottom: 18px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about {
+            background: var(--light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: var(--white);
+            padding: 45px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--secondary);
+        }
+
+        .about-box:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .about-box .icon-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: var(--accent);
+            border-radius: 12px;
+            margin-bottom: 18px;
+            font-size: 1.6rem;
+            color: var(--secondary);
+        }
+
+        .about-box h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+        }
+
+        .about-box p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            padding: 40px 32px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--white);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--secondary);
+        }
+
+        .card .card-number {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(10, 46, 74, 0.04);
+            line-height: 1;
+        }
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            font-size: 1.8rem;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .card-icon {
+            background: var(--secondary);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .card .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-top: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .card .card-link:hover {
+            gap: 14px;
+            color: var(--primary);
+        }
+
+        .cta-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .benefits {
+            background: var(--light);
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .benefit {
+            display: flex;
+            gap: 20px;
+            padding: 25px 30px;
+            background: var(--white);
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            align-items: flex-start;
+        }
+
+        .benefit:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow);
+            border-color: var(--secondary);
+        }
+
+        .benefit .icon-check {
+            min-width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            margin-top: 2px;
+        }
+
+        .benefit p {
+            color: var(--dark);
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .testimonials {
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            padding: 35px;
+            background: var(--light);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .testimonial-card .stars {
+            color: #f59e0b;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-card .quote {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        .testimonial-card .quote::before {
+            content: '"';
+            font-size: 2rem;
+            color: var(--secondary);
+            opacity: 0.5;
+        }
+
+        .testimonial-card .quote::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--secondary);
+            opacity: 0.5;
+        }
+
+        .testimonial-card .author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .testimonial-card .author .avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--white);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .testimonial-card .author .info strong {
+            display: block;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+
+        .testimonial-card .author .info span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .trust-badges {
+            background: var(--white);
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .trust-badges .badges-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .trust-badges .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .trust-badges .badge-item i {
+            font-size: 1.6rem;
+            color: var(--secondary);
+        }
+
+        .contact {
+            background: var(--gradient-primary);
+            color: var(--white);
+        }
+
+        .contact .section-header h2,
+        .contact .section-header p {
+            color: var(--white);
+        }
+
+        .contact .section-header .section-tag {
+            background: rgba(255,255,255,0.15);
+            color: var(--white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-box {
+            background: var(--white);
+            color: var(--dark);
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .contact-box h3 {
+            color: var(--primary);
+            margin-bottom: 28px;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-item .contact-icon {
+            min-width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1rem;
+        }
+
+        .contact-item .contact-content {
+            flex: 1;
+        }
+
+        .contact-item .contact-content strong {
+            display: block;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item .contact-content span {
+            color: var(--text-light);
+        }
+
+        .contact-divider {
+            border: none;
+            border-top: 2px dashed var(--border);
+            margin: 25px 0;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        .contact-form .form-group label .required {
+            color: #e74c3c;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background: var(--white);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 4px rgba(31, 122, 140, 0.1);
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%235d6b75' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+
+        .contact-form .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--secondary);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+
+        .contact-form .submit-btn:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form .submit-btn i {
+            margin-right: 10px;
+        }
+
+        .legal {
+            background: #f1f5f7;
+            padding: 80px 0;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .legal article {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 35px;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .legal article:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .legal article .legal-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .legal article h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .legal article p {
+            color: #52616b;
+            margin-bottom: 12px;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .legal article p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: #0a1e2e;
+            color: #dbe5ea;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 50px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            font-size: 1.6rem;
+        }
+
+        .footer-brand .logo span {
+            color: var(--accent);
+        }
+
+        .footer-brand .logo .logo-icon {
+            background: var(--secondary);
+        }
+
+        .footer-brand p {
+            color: #b0c8d4;
+            line-height: 1.8;
+            margin-top: 15px;
+            max-width: 350px;
+        }
+
+        .footer-brand .social {
+            margin-top: 25px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-brand .social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            color: var(--white);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-brand .social a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            border-color: var(--secondary);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .footer-link-item h4 {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-link-item a {
+            display: block;
+            color: #b0c8d4;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            padding: 4px 0;
+        }
+
+        .footer-link-item a:hover {
+            color: var(--accent);
+        }
+
+        .footer-link-item p {
+            color: #b0c8d4;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 4px 0;
+        }
+
+        .footer-link-item .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 4px 0;
+        }
+
+        .footer-link-item .contact-info i {
+            color: var(--secondary);
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-top: 45px;
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-bottom p {
+            color: #8aa8b8;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom .footer-legal-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-bottom .footer-legal-links a {
+            color: #8aa8b8;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom .footer-legal-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                display: none;
+            }
+            .hero {
+                padding: 80px 0 60px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero-stats {
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+            section {
+                padding: 60px 0;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .about-grid,
+            .solution-grid,
+            .benefits-list,
+            .testimonials-grid,
+            .legal-grid,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .footer-links {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .hero-buttons .button {
+                justify-content: center;
+            }
+            .trust-badges .badges-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contact-box {
+                padding: 30px;
+            }
+            .legal-grid {
+                gap: 20px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom .footer-legal-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 0 40px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .hero-stats .stat-number {
+                font-size: 1.5rem;
+            }
+            .button {
+                padding: 14px 24px;
+                font-size: 0.95rem;
+            }
+            .about-box,
+            .card,
+            .contact-box {
+                padding: 25px;
+            }
+            .benefit {
+                padding: 18px 20px;
+            }
+            .footer-links {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .testimonial-card {
+                padding: 25px;
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18340812821"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18340812821');
+    </script>
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18340812821/e9D3CImGs9QcEJWwyqlE',
+          'transaction_id': ''
+      });
+    </script>
+</head>
+<body>
+
+    <a class="skip-link" href="#inicio">Skip to main content</a>
+
+    <header>
+        <div class="container navbar">
+            <a href="#inicio" class="logo" aria-label="Farmacloud - Home">
+                <span class="logo-icon"><i class="fas fa-pills"></i></span>
+                Farma<span>cloud</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <a href="#nosotros">About</a>
+                <a href="#solucion">Solutions</a>
+                <a href="#beneficios">Benefits</a>
+                <a href="#testimonios">Testimonials</a>
+                <a href="#contacto" class="nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i> 
+                    Global leader in pharmacy management
+                </div>
+                <h1>
+                    The software that <span class="highlight">transforms</span> your pharmacy management
+                </h1>
+                <p>
+                    Digitize your pharmacy with the most comprehensive technology solution. 
+                    Control your inventory in real-time, automate sales processes and optimize 
+                    every aspect of your pharmaceutical business.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="button button-primary">
+                        <i class="fas fa-rocket"></i>
+                        Request Free Demo
+                    </a>
+                    <a href="#solucion" class="button button-secondary">
+                        <i class="fas fa-play-circle"></i>
+                        See how it works
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Pharmacies trust us</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfaction rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Technical support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-badges">
+            <div class="container">
+                <div class="badges-grid">
+                    <div class="badge-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Data security guaranteed</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Integrated with tax systems</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Access from any device</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-headset"></i>
+                        <span>Global support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="nosotros" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">About Us</span>
+                    <h2 id="about-title">Technology that <span style="color: var(--secondary);">empowers</span> your pharmacy</h2>
+                    <p>
+                        We are a technology company with years of experience developing digital 
+                        solutions for the pharmaceutical sector worldwide. Our team combines 
+                        pharmacy and technology expertise to deliver tools that truly transform 
+                        your business.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-box">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>
+                            To provide pharmacies worldwide with technological tools that 
+                            simplify daily operations, reduce administrative errors and improve 
+                            customer service. We work to help every pharmacy compete in the 
+                            digital age.
+                        </p>
+                    </div>
+
+                    <div class="about-box">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>
+                            To be the leading technology partner for pharmacies globally, 
+                            driving industry modernization through innovative, scalable 
+                            solutions adapted to local needs worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucion" aria-labelledby="solution-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Solutions</span>
+                    <h2 id="solution-title">Everything you need to <span style="color: var(--secondary);">manage</span> your pharmacy</h2>
+                    <p>
+                        Farmacloud integrates a complete ecosystem of tools designed to 
+                        optimize every aspect of pharmaceutical management. All in one 
+                        intuitive and secure platform.
+                    </p>
+                </div>
+
+                <div class="solution-grid">
+                    <div class="card">
+                        <span class="card-number">01</span>
+                        <div class="card-icon">
+                            <i class="fas fa-archive"></i>
+                        </div>
+                        <h3>Smart Inventory Management</h3>
+                        <p>
+                            Control your inventory in real-time with expiration alerts, 
+                            automatic replenishment and batch tracking. Say goodbye to paper 
+                            and manual errors.
+                        </p>
+                        <a href="#" class="card-link">
+                            Learn more <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-number">02</span>
+                        <div class="card-icon">
+                            <i class="fas fa-cash-register"></i>
+                        </div>
+                        <h3>Integrated Point of Sale</h3>
+                        <p>
+                            Process sales quickly and securely. Integration with tax systems 
+                            and multiple payment methods for a seamless checkout experience.
+                        </p>
+                        <a href="#" class="card-link">
+                            Learn more <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-number">03</span>
+                        <div class="card-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud Access</h3>
+                        <p>
+                            Access all your pharmacy information from anywhere, on any device. 
+                            Secure, backed-up data available 24/7 with bank-level encryption.
+                        </p>
+                        <a href="#" class="card-link">
+                            Learn more <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cta-center">
+                    <a href="#contacto" class="button button-accent">
+                        <i class="fas fa-arrow-right"></i>
+                        Discover all features
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits" id="beneficios" aria-labelledby="benefits-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Benefits</span>
+                    <h2 id="benefits-title">Why <span style="color: var(--secondary);">choose</span> Farmacloud?</h2>
+                    <p>
+                        More than software, we are a strategic partner for your pharmacy's 
+                        growth. Here are some of the benefits we offer:
+                    </p>
+                </div>
+
+                <div class="benefits-list">
+                    <div class="benefit">
+                        <span class="icon-check"><i class="fas fa-check"></i></span>
+                        <p>Intuitive dashboards with clear and organized information</p>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="icon-check"><i class="fas fa-check"></i></span>
+                        <p>Technical support available when you need it</p>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="icon-check"><i class="fas fa-check"></i></span>
+                        <p>Constant updates adapted to global regulations</p>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="icon-check"><i class="fas fa-check"></i></span>
+                        <p>Bank-level data security encryption</p>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="icon-check"><i class="fas fa-check"></i></span>
+                        <p>Free training for your entire team</p>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="icon-check"><i class="fas fa-check"></i></span>
+                        <p>Integration with suppliers and distributors</p>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="icon-check"><i class="fas fa-check"></i></span>
+                        <p>Data reports and analytics for better decisions</p>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="icon-check"><i class="fas fa-check"></i></span>
+                        <p>No hidden costs or lock-in contracts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonios" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Testimonials</span>
+                    <h2 id="testimonials-title">What our <span style="color: var(--secondary);">clients say</span></h2>
+                    <p>
+                        Pharmacies around the world trust Farmacloud to digitize their operations 
+                        and grow their business.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">
+                            Since implementing Farmacloud, inventory control has become much 
+                            easier. We reduced errors by 80% and now we can focus on giving 
+                            better service to our customers.
+                        </p>
+                        <div class="author">
+                            <div class="avatar">MG</div>
+                            <div class="info">
+                                <strong>Maria Gómez</strong>
+                                <span>Central Pharmacy, Argentina</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">
+                            The integration with tax systems saved us so much time on invoicing. 
+                            Plus, the support is excellent, they always respond quickly and 
+                            solve any questions.
+                        </p>
+                        <div class="author">
+                            <div class="avatar">JP</div>
+                            <div class="info">
+                                <strong>Juan Pérez</strong>
+                                <span>Salud Pharmacy, Spain</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="quote">
+                            Being able to access my pharmacy data from home or my phone is 
+                            amazing. Farmacloud gave us the flexibility we needed to adapt 
+                            to new times.
+                        </p>
+                        <div class="author">
+                            <div class="avatar">CR</div>
+                            <div class="info">
+                                <strong>Carlos Rodríguez</strong>
+                                <span>Centro Pharmacy, Mexico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contacto" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Contact</span>
+                    <h2 id="contact-title">Ready to <span style="color: var(--accent);">transform</span> your pharmacy?</h2>
+                    <p>
+                        Complete the form and one of our advisors will contact you to offer 
+                        a personalized, no-obligation demo.
+                    </p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-box">
+                        <h3><i class="fas fa-phone-alt" style="color: var(--secondary); margin-right: 10px;"></i> Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-building"></i></div>
+                            <div class="contact-content">
+                                <strong>Company</strong>
+                                <span>Farmacloud S.A.</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-content">
+                                <strong>Email</strong>
+                                <span>contact@farmacloud.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-content">
+                                <strong>Phone</strong>
+                                <span>+54 11 5236-7890</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-whatsapp"></i></div>
+                            <div class="contact-content">
+                                <strong>WhatsApp</strong>
+                                <span>+54 9 11 3456-7890</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-content">
+                                <strong>Main Office</strong>
+                                <span>Av. Corrientes 1234, Piso 8, C1043AAN, Buenos Aires</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div class="contact-content">
+                                <strong>Business Hours</strong>
+                                <span>Monday to Friday 9:00 AM to 6:00 PM</span>
+                            </div>
+                        </div>
+
+                        <hr class="contact-divider">
+
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 120px;">
+                                <strong style="display: block; font-size: 0.8rem; color: var(--text-light);">Tax ID</strong>
+                                <span style="font-weight: 600;">30-71234567-9</span>
+                            </div>
+                            <div style="flex: 1; min-width: 120px;">
+                                <strong style="display: block; font-size: 0.8rem; color: var(--text-light);">Status</strong>
+                                <span style="font-weight: 600;">Registered</span>
+                            </div>
+                        </div>
+
+                        <hr class="contact-divider">
+
+                        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7; margin: 0;">
+                            <i class="fas fa-info-circle" style="color: var(--secondary); margin-right: 8px;"></i>
+                            The information published on this site is for informational purposes and describes 
+                            our technological proposal for the pharmaceutical sector.
+                        </p>
+                    </div>
+
+                    <div class="contact-box">
+                        <h3><i class="fas fa-paper-plane" style="color: var(--secondary); margin-right: 10px;"></i> Send us a message</h3>
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="e.g. Maria González" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+54 11 1234-5678">
+                            </div>
+                            <div class="form-group">
+                                <label for="farmacia">Pharmacy name</label>
+                                <input type="text" id="farmacia" name="farmacia" placeholder="e.g. Central Pharmacy">
+                            </div>
+                            <div class="form-group">
+                                <label for="interest">What are you interested in?</label>
+                                <select id="interest" name="interest">
+                                    <option value="">Select an option</option>
+                                    <option value="demo">Request a demo</option>
+                                    <option value="info">General information</option>
+                                    <option value="pricing">Pricing and plans</option>
+                                    <option value="support">Technical support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="legal" id="legal" aria-labelledby="legal-title">
+            <div class="container">
+                <div class="section-header" style="margin-bottom: 40px;">
+                    <span class="section-tag">Legal</span>
+                    <h2 id="legal-title" style="color: var(--primary);">Legal <span style="color: var(--secondary);">Information</span></h2>
+                    <p>Legal documents governing the use of our website and services.</p>
+                </div>
+
+                <div class="legal-grid">
+                    <article>
+                        <div class="legal-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h2>Privacy Policy</h2>
+                        <p>
+                            At Farmacloud, we respect the privacy of our website visitors and 
+                            comply with data protection regulations. Information provided 
+                            voluntarily through contact channels will be used solely to respond 
+                            to inquiries and maintain communication related to Farmacloud.
+                        </p>
+                        <p>
+                            We do not request medical information or sensitive data through this 
+                            website. Personal data will be treated with strict confidentiality 
+                            and appropriate security measures.
+                        </p>
+                        <p>
+                            Users have the right to access, rectify and delete their personal data 
+                            at any time by contacting privacy@farmacloud.com
+                        </p>
+                    </article>
+
+                    <article>
+                        <div class="legal-icon"><i class="fas fa-file-contract"></i></div>
+                        <h2>Terms and Conditions</h2>
+                        <p>
+                            The content of this website is for informational purposes. Farmacloud 
+                            reserves the right to update, modify or remove content as necessary.
+                        </p>
+                        <p>
+                            <strong>Important:</strong> The information published does not constitute 
+                            medical advice, diagnosis, treatment or clinical recommendation. Always 
+                            consult qualified healthcare professionals.
+                        </p>
+                        <p>
+                            Use of this website implies acceptance of these terms and conditions. 
+                            For the use of our services, additional terms will be provided at the 
+                            time of contracting.
+                        </p>
+                        <p>
+                            Farmacloud is not responsible for the misuse of information published 
+                            on this site.
+                        </p>
+                    </article>
+
+                    <article>
+                        <div class="legal-icon"><i class="fas fa-gavel"></i></div>
+                        <h2>Legal Notice</h2>
+                        <p>
+                            Farmacloud S.A. is a technology company based in Buenos Aires, Argentina.
+                        </p>
+                        <p>
+                            <strong>Registration details:</strong><br>
+                            Tax ID: 30-71234567-9<br>
+                            Status: Registered<br>
+                            Established: March 15, 2021
+                        </p>
+                        <p>
+                            This site is for informational purposes and presents a technological 
+                            solution for pharmaceutical management. It does not constitute an 
+                            e-commerce platform, medical prescription service or diagnostic service.
+                        </p>
+                        <p>
+                            For legal inquiries, contact: <strong>legal@farmacloud.com</strong>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#inicio" class="logo">
+                        <span class="logo-icon"><i class="fas fa-pills"></i></span>
+                        Farma<span>cloud</span>
+                    </a>
+                    <p>
+                        Digital solutions for the management and organization of the pharmaceutical 
+                        sector worldwide. Technology designed for pharmacies.
+                    </p>
+                    <div class="social">
+                        <a href="#" aria-label="Facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="X" title="X">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-link-item">
+                        <h4>Navigation</h4>
+                        <a href="#nosotros">About</a>
+                        <a href="#solucion">Solutions</a>
+                        <a href="#beneficios">Benefits</a>
+                        <a href="#testimonios">Testimonials</a>
+                        <a href="#contacto">Contact</a>
+                    </div>
+
+                    <div class="footer-link-item">
+                        <h4>Legal</h4>
+                        <a href="#legal">Privacy Policy</a>
+                        <a href="#legal">Terms and Conditions</a>
+                        <a href="#legal">Legal Notice</a>
+                        <a href="#legal">Cookie Policy</a>
+                    </div>
+
+                    <div class="footer-link-item">
+                        <h4>Contact</h4>
+                        <div class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@farmacloud.com</span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-phone"></i>
+                            <span>+54 11 5236-7890</span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-whatsapp"></i>
+                            <span>+54 9 11 3456-7890</span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Buenos Aires, Argentina</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 Farmacloud S.A. All rights reserved. | 
+                    Made with <i class="fas fa-heart" style="color: #e74c3c;"></i> for pharmacies worldwide
+                </p>
+                <div class="footer-legal-links">
+                    <a href="#legal">Privacy</a>
+                    <a href="#legal">Terms</a>
+                    <a href="#legal">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === "#" || href === "#inicio") return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in effect
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .about-box, .benefit, .testimonial-card, .legal article').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.card, .about-box, .benefit, .testimonial-card, .legal article').forEach((el, index) => {
+            const delay = Math.min(index * 0.08, 0.8);
+            el.style.transitionDelay = `${delay}s`;
+        });
+
+        // Parallax effect on hero (desktop only)
+        if (window.innerWidth > 800) {
+            window.addEventListener('scroll', function() {
+                const hero = document.querySelector('.hero');
+                const scrolled = window.pageYOffset;
+                if (scrolled < hero.offsetHeight) {
+                    const parallax = scrolled * 0.5;
+                    hero.style.backgroundPositionY = `${parallax}px`;
+                }
+            });
+        }
+
+        // Basic form validation
+        document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+            let isValid = true;
+
+            if (!name.value.trim()) {
+                name.style.borderColor = '#e74c3c';
+                isValid = false;
+            } else {
+                name.style.borderColor = '';
+            }
+
+            if (!email.value.trim() || !email.value.includes('@')) {
+                email.style.borderColor = '#e74c3c';
+                isValid = false;
+            } else {
+                email.style.borderColor = '';
+            }
+
+            if (!message.value.trim()) {
+                message.style.borderColor = '#e74c3c';
+                isValid = false;
+            } else {
+                message.style.borderColor = '';
+            }
+
+            if (isValid) {
+                const btn = this.querySelector('.submit-btn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                btn.disabled = true;
+
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Message sent!';
+                    btn.style.background = '#27ae60';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                        this.reset();
+                    }, 3000);
+                }, 1500);
+            }
+        });
+
+        console.log('Farmacloud - Website loaded successfully');
+    </script>
+</body>
+</html>
