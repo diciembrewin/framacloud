@@ -1,0 +1,4 @@
+# Reglas de redirección para Cloudflare Pages
+/ /inicio.html 302
+/f.html /f.html 200
+/inicio.html /inicio.html 200
