@@ -1,5 +1,5 @@
 {
-  "name": "farmacloud-redirect",
+  "name": "argenframacloud",
   "version": "1.0.0",
   "description": "Redirección por país para Farmacloud",
   "main": "api/redirect.js"
