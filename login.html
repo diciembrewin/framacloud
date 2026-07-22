@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+    content="FarmaCloud es una solución digital orientada a la organización y gestión del sector farmacéutico.">
+
+<meta name="robots"
+    content="index, follow">
+
+<title>FarmaCloud | Solución digital para el sector farmacéutico</title>
+
+
+<style>
+
+    /* =========================
+       VARIABLES
+    ========================== */
+
+    :root {
+
+        --primary: #123b5d;
+        --primary-dark: #0b2b44;
+
+        --secondary: #1f7a8c;
+
+        --accent: #f2b233;
+
+        --background: #f5f7fa;
+
+        --white: #ffffff;
+
+        --text: #263238;
+
+        --muted: #687781;
+
+        --border: #e3e8ed;
+
+    }
+
+
+    /* =========================
+       RESET
+    ========================== */
+
+    * {
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+    }
+
+
+    html {
+
+        scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+        font-family:
+
+            Arial,
+            Helvetica,
+            sans-serif;
+
+        background: var(--white);
+
+        color: var(--text);
+
+        line-height: 1.6;
+
+    }
+
+
+    a {
+
+        text-decoration: none;
+
+        color: inherit;
+
+    }
+
+
+    img {
+
+        max-width: 100%;
+
+        display: block;
+
+    }
+
+
+    .container {
+
+        width: 92%;
+
+        max-width: 1180px;
+
+        margin: auto;
+
+    }
+
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+
+        position: sticky;
+
+        top: 0;
+
+        z-index: 1000;
+
+        background: rgba(255,255,255,0.97);
+
+        border-bottom: 1px solid var(--border);
+
+        backdrop-filter: blur(10px);
+
+    }
+
+
+    .navbar {
+
+        min-height: 76px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 30px;
+
+    }
+
+
+    .brand {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+    }
+
+
+    .brand img {
+
+        width: 150px;
+
+        height: auto;
+
+    }
+
+
+    .brand-name {
+
+        font-size: 1.45rem;
+
+        font-weight: 800;
+
+        color: var(--primary);
+
+    }
+
+
+    .brand-name span {
+
+        color: var(--secondary);
+
+    }
+
+
+    nav {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 28px;
+
+    }
+
+
+    nav a {
+
+        color: var(--primary);
+
+        font-size: 0.95rem;
+
+        font-weight: 600;
+
+        transition: 0.3s ease;
+
+    }
+
+
+    nav a:hover {
+
+        color: var(--secondary);
+
+    }
+
+
+    .nav-button {
+
+        background: var(--primary);
+
+        color: var(--white);
+
+        padding: 11px 20px;
+
+        border-radius: 6px;
+
+    }
+
+
+    .nav-button:hover {
+
+        background: var(--secondary);
+
+        color: var(--white);
+
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+
+        min-height: 650px;
+
+        display: flex;
+
+        align-items: center;
+
+        background:
+
+            linear-gradient(
+
+                120deg,
+
+                rgba(11,43,68,0.98),
+
+                rgba(18,59,93,0.93),
+
+                rgba(31,122,140,0.88)
+
+            );
+
+        color: var(--white);
+
+        position: relative;
+
+        overflow: hidden;
+
+    }
+
+
+    .hero::after {
+
+        content: "";
+
+        position: absolute;
+
+        width: 500px;
+
+        height: 500px;
+
+        border-radius: 50%;
+
+        border: 1px solid rgba(255,255,255,0.12);
+
+        right: -180px;
+
+        top: -120px;
+
+    }
+
+
+    .hero-content {
+
+        max-width: 760px;
+
+        position: relative;
+
+        z-index: 2;
+
+    }
+
+
+    .hero-label {
+
+        display: inline-block;
+
+        padding: 8px 14px;
+
+        border-radius: 30px;
+
+        background: rgba(255,255,255,0.12);
+
+        border: 1px solid rgba(255,255,255,0.20);
+
+        margin-bottom: 22px;
+
+        font-size: 0.85rem;
+
+        letter-spacing: 0.5px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: clamp(2.5rem, 5vw, 4.8rem);
+
+        line-height: 1.08;
+
+        margin-bottom: 25px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .hero h1 span {
+
+        color: #d9f0f2;
+
+    }
+
+
+    .hero p {
+
+        font-size: 1.18rem;
+
+        max-width: 680px;
+
+        color: rgba(255,255,255,0.88);
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .hero-actions {
+
+        display: flex;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .btn {
+
+        display: inline-block;
+
+        padding: 13px 25px;
+
+        border-radius: 6px;
+
+        font-weight: bold;
+
+        transition: 0.3s ease;
+
+    }
+
+
+    .btn-primary {
+
+        background: var(--accent);
+
+        color: #263238;
+
+    }
+
+
+    .btn-primary:hover {
+
+        transform: translateY(-3px);
+
+        opacity: 0.9;
+
+    }
+
+
+    .btn-outline {
+
+        border: 1px solid rgba(255,255,255,0.65);
+
+        color: var(--white);
+
+    }
+
+
+    .btn-outline:hover {
+
+        background: var(--white);
+
+        color: var(--primary);
+
+    }
+
+
+    /* =========================
+       SECCIONES
+    ========================== */
+
+    section {
+
+        padding: 95px 0;
+
+    }
+
+
+    .section-heading {
+
+        max-width: 720px;
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .section-heading.center {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        text-align: center;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: clamp(2rem, 4vw, 3rem);
+
+        color: var(--primary);
+
+        line-height: 1.2;
+
+        margin-bottom: 17px;
+
+    }
+
+
+    .section-heading p {
+
+        color: var(--muted);
+
+        font-size: 1.05rem;
+
+    }
+
+
+    .section-tag {
+
+        color: var(--secondary);
+
+        text-transform: uppercase;
+
+        font-size: 0.78rem;
+
+        font-weight: bold;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 12px;
+
+        display: block;
+
+    }
+
+
+    /* =========================
+       SOBRE FARMACLOUD
+    ========================== */
+
+    .about {
+
+        background: var(--background);
+
+    }
+
+
+    .about-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 60px;
+
+        align-items: center;
+
+    }
+
+
+    .about-text p {
+
+        color: var(--muted);
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .about-panel {
+
+        background: var(--white);
+
+        border: 1px solid var(--border);
+
+        border-radius: 12px;
+
+        padding: 38px;
+
+        box-shadow: 0 12px 35px rgba(18,59,93,0.06);
+
+    }
+
+
+    .about-panel h3 {
+
+        color: var(--primary);
+
+        font-size: 1.4rem;
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .about-panel p {
+
+        color: var(--muted);
+
+    }
+
+
+    /* =========================
+       SOLUCIÓN
+    ========================== */
+
+    .solution-grid {
+
+        display: grid;
+
+        grid-template-columns:
+
+            repeat(3, 1fr);
+
+        gap: 24px;
+
+    }
+
+
+    .solution-card {
+
+        padding: 32px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 12px;
+
+        background: var(--white);
+
+        transition: 0.3s ease;
+
+    }
+
+
+    .solution-card:hover {
+
+        transform: translateY(-6px);
+
+        box-shadow:
+
+            0 15px 35px
+
+            rgba(18,59,93,0.10);
+
+    }
+
+
+    .icon {
+
+        width: 54px;
+
+        height: 54px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 10px;
+
+        background: #e5f3f5;
+
+        color: var(--secondary);
+
+        font-size: 1.5rem;
+
+        margin-bottom: 22px;
+
+    }
+
+
+    .solution-card h3 {
+
+        color: var(--primary);
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .solution-card p {
+
+        color: var(--muted);
+
+    }
+
+
+    /* =========================
+       PROCESO
+    ========================== */
+
+    .process {
+
+        background: var(--background);
+
+    }
+
+
+    .process-grid {
+
+        display: grid;
+
+        grid-template-columns:
+
+            repeat(4, 1fr);
+
+        gap: 20px;
+
+    }
+
+
+    .process-item {
+
+        background: var(--white);
+
+        border: 1px solid var(--border);
+
+        padding: 28px 22px;
+
+        border-radius: 10px;
+
+        text-align: center;
+
+    }
+
+
+    .process-number {
+
+        width: 42px;
+
+        height: 42px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        margin: 0 auto 17px;
+
+        border-radius: 50%;
+
+        background: var(--primary);
+
+        color: var(--white);
+
+        font-weight: bold;
+
+    }
+
+
+    .process-item h3 {
+
+        color: var(--primary);
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .process-item p {
+
+        color: var(--muted);
+
+        font-size: 0.95rem;
+
+    }
+
+
+    /* =========================
+       BENEFICIOS
+    ========================== */
+
+    .benefits-grid {
+
+        display: grid;
+
+        grid-template-columns:
+
+            repeat(2, 1fr);
+
+        gap: 20px;
+
+    }
+
+
+    .benefit {
+
+        display: flex;
+
+        gap: 16px;
+
+        padding: 24px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 10px;
+
+    }
+
+
+    .benefit-check {
+
+        color: var(--secondary);
+
+        font-size: 1.3rem;
+
+        font-weight: bold;
+
+    }
+
+
+    .benefit h3 {
+
+        color: var(--primary);
+
+        margin-bottom: 6px;
+
+    }
+
+
+    .benefit p {
+
+        color: var(--muted);
+
+    }
+
+
+    /* =========================
+       CONTACTO
+    ========================== */
+
+    .contact {
+
+        background:
+
+            linear-gradient(
+
+                135deg,
+
+                var(--primary-dark),
+
+                var(--primary)
+
+            );
+
+        color: var(--white);
+
+    }
+
+
+    .contact-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 60px;
+
+        align-items: start;
+
+    }
+
+
+    .contact h2 {
+
+        color: var(--white);
+
+    }
+
+
+    .contact p {
+
+        color: rgba(255,255,255,0.80);
+
+    }
+
+
+    .contact-info {
+
+        display: grid;
+
+        gap: 20px;
+
+        margin-top: 30px;
+
+    }
+
+
+    .contact-info-item {
+
+        display: flex;
+
+        gap: 15px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .contact-info-item strong {
+
+        display: block;
+
+        margin-bottom: 3px;
+
+    }
+
+
+    .contact-info-item span {
+
+        color: rgba(255,255,255,0.75);
+
+    }
+
+
+    .contact-box {
+
+        background: var(--white);
+
+        padding: 35px;
+
+        border-radius: 12px;
+
+        color: var(--text);
+
+    }
+
+
+    .contact-box h3 {
+
+        color: var(--primary);
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .contact-box p {
+
+        color: var(--muted);
+
+    }
+
+
+    /* =========================
+       LEGAL
+    ========================== */
+
+    .legal {
+
+        background: #f1f4f6;
+
+        padding: 70px 0;
+
+    }
+
+
+    .legal-card {
+
+        background: var(--white);
+
+        border: 1px solid var(--border);
+
+        border-radius: 10px;
+
+        padding: 32px;
+
+        margin-bottom: 22px;
+
+    }
+
+
+    .legal-card h2 {
+
+        color: var(--primary);
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .legal-card p {
+
+        color: var(--muted);
+
+        margin-bottom: 13px;
+
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+
+        background: #092337;
+
+        color: #d7e2e8;
+
+        padding: 55px 0 25px;
+
+    }
+
+
+    .footer-top {
+
+        display: grid;
+
+        grid-template-columns:
+
+            1.1fr 2fr;
+
+        gap: 60px;
+
+    }
+
+
+    .footer-brand h3 {
+
+        color: var(--white);
+
+        font-size: 1.6rem;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .footer-brand h3 span {
+
+        color: #8bd2d9;
+
+    }
+
+
+    .footer-brand p {
+
+        color: #aebfc8;
+
+        max-width: 330px;
+
+    }
+
+
+    .footer-links {
+
+        display: grid;
+
+        grid-template-columns:
+
+            repeat(3, 1fr);
+
+        gap: 25px;
+
+    }
+
+
+    .footer-link-item {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 9px;
+
+    }
+
+
+    .footer-link-item a {
+
+        color: var(--white);
+
+        font-weight: bold;
+
+        font-size: 1rem;
+
+    }
+
+
+    .footer-link-item a:hover {
+
+        color: #8bd2d9;
+
+    }
+
+
+    .footer-link-item p {
+
+        color: #aebfc8;
+
+        font-size: 0.88rem;
+
+        line-height: 1.5;
+
+    }
+
+
+    .copyright {
+
+        border-top: 1px solid rgba(255,255,255,0.12);
+
+        margin-top: 45px;
+
+        padding-top: 20px;
+
+        color: #8fa3ad;
+
+        font-size: 0.85rem;
+
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+
+        nav {
+
+            display: none;
+
+        }
+
+
+        .about-grid,
+
+        .contact-grid,
+
+        .footer-top {
+
+            grid-template-columns: 1fr;
+
+        }
+
+
+        .solution-grid {
+
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+
+        .process-grid {
+
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+
+        section {
+
+            padding: 70px 0;
+
+        }
+
+
+        .hero {
+
+            min-height: 580px;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: 2.6rem;
+
+        }
+
+
+        .solution-grid,
+
+        .process-grid,
+
+        .benefits-grid,
+
+        .footer-links {
+
+            grid-template-columns: 1fr;
+
+        }
+
+
+        .brand img {
+
+            width: 125px;
+
+        }
+
+
+        .hero-actions {
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+        }
+
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+    <div class="container navbar">
+
+
+        <a href="#inicio" class="brand">
+
+            <!--
+                Si tienes el logo real,
+                puedes usar:
+
+                <img src="/images/logo.png">
+
+                Si no, se muestra el nombre.
+            -->
+
+            <div class="brand-name">
+
+                Farma<span>Cloud</span>
+
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="#nosotros">
+                Nosotros
+            </a>
+
+            <a href="#solucion">
+                Solución
+            </a>
+
+            <a href="#proceso">
+                Enfoque
+            </a>
+
+            <a href="#beneficios">
+                Beneficios
+            </a>
+
+            <a href="#contacto"
+               class="nav-button">
+
+                Contacto
+
+            </a>
+
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero"
+         id="inicio">
+
+
+    <div class="container">
+
+
+        <div class="hero-content">
+
+
+            <span class="hero-label">
+
+                Tecnología para el sector farmacéutico
+
+            </span>
+
+
+            <h1>
+
+                Una nueva forma de organizar
+
+                <span>
+
+                    la gestión farmacéutica
+
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                FarmaCloud es una propuesta digital orientada
+                a apoyar la organización, gestión y evolución
+                tecnológica de procesos relacionados con el
+                entorno farmacéutico.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+
+                <a href="#solucion"
+                   class="btn btn-primary">
+
+                    Conocer nuestra solución
+
+                </a>
+
+
+                <a href="#nosotros"
+                   class="btn btn-outline">
+
+                    Saber más
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     NOSOTROS
+========================== -->
+
+<section class="about"
+         id="nosotros">
+
+
+    <div class="container">
+
+
+        <div class="about-grid">
+
+
+            <div class="about-text">
+
+
+                <div class="section-heading">
+
+
+                    <span class="section-tag">
+
+                        Sobre nosotros
+
+                    </span>
+
+
+                    <h2>
+
+                        Tecnología aplicada a una gestión más organizada
+
+                    </h2>
+
+
+                    <p>
+
+                        FarmaCloud nace como una propuesta tecnológica
+                        enfocada en apoyar la transformación digital
+                        dentro del sector farmacéutico.
+
+                    </p>
+
+
+                </div>
+
+
+                <p>
+
+                    Nuestro enfoque se centra en la organización de
+                    información, la gestión de procesos y el uso
+                    responsable de herramientas digitales.
+
+                </p>
+
+
+                <p>
+
+                    La tecnología puede ayudar a las organizaciones
+                    a trabajar de forma más estructurada, clara
+                    y eficiente.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="about-panel">
+
+
+                <h3>
+
+                    Nuestra visión
+
+                </h3>
+
+
+                <p>
+
+                    Contribuir a la evolución digital del sector
+                    farmacéutico mediante soluciones tecnológicas
+                    orientadas a la organización, la información
+                    y la gestión de procesos.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     SOLUCIÓN
+========================== -->
+
+<section id="solucion">
+
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+
+            <span class="section-tag">
+
+                Nuestra propuesta
+
+            </span>
+
+
+            <h2>
+
+                Una solución digital con enfoque farmacéutico
+
+            </h2>
+
+
+            <p>
+
+                FarmaCloud reúne una visión tecnológica orientada
+                a apoyar diferentes necesidades de organización
+                y gestión dentro del entorno farmacéutico.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="solution-grid">
+
+
+            <div class="solution-card">
+
+
+                <div class="icon">
+
+                    ◈
+
+                </div>
+
+
+                <h3>
+
+                    Organización
+
+                </h3>
+
+
+                <p>
+
+                    Una propuesta orientada a estructurar información
+                    y procesos mediante herramientas digitales.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="solution-card">
+
+
+                <div class="icon">
+
+                    ◌
+
+                </div>
+
+
+                <h3>
+
+                    Gestión digital
+
+                </h3>
+
+
+                <p>
+
+                    Tecnología enfocada en apoyar una gestión más
+                    organizada y centralizada.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="solution-card">
+
+
+                <div class="icon">
+
+                    ⌁
+
+                </div>
+
+
+                <h3>
+
+                    Información
+
+                </h3>
+
+
+                <p>
+
+                    Un enfoque que busca facilitar la organización
+                    y disponibilidad de información autorizada.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     PROCESO
+========================== -->
+
+<section class="process"
+         id="proceso">
+
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+
+            <span class="section-tag">
+
+                Nuestro enfoque
+
+            </span>
+
+
+            <h2>
+
+                Tecnología con una visión estructurada
+
+            </h2>
+
+
+            <p>
+
+                Nuestra propuesta se basa en un enfoque progresivo
+                para entender, organizar y mejorar los procesos
+                mediante herramientas digitales.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-item">
+
+
+                <div class="process-number">
+
+                    01
+
+                </div>
+
+
+                <h3>
+
+                    Analizar
+
+                </h3>
+
+
+                <p>
+
+                    Comprender las necesidades de organización
+                    y gestión de información.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="process-item">
+
+
+                <div class="process-number">
+
+                    02
+
+                </div>
+
+
+                <h3>
+
+                    Organizar
+
+                </h3>
+
+
+                <p>
+
+                    Estructurar los procesos de forma clara
+                    y ordenada.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="process-item">
+
+
+                <div class="process-number">
+
+                    03
+
+                </div>
+
+
+                <h3>
+
+                    Digitalizar
+
+                </h3>
+
+
+                <p>
+
+                    Integrar herramientas tecnológicas que
+                    apoyen la gestión.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="process-item">
+
+
+                <div class="process-number">
+
+                    04
+
+                </div>
+
+
+                <h3>
+
+                    Evolucionar
+
+                </h3>
+
+
+                <p>
+
+                    Promover una mejora continua basada en
+                    la tecnología y la información.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     BENEFICIOS
+========================== -->
+
+<section id="beneficios">
+
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
+            <span class="section-tag">
+
+                Lo que representa FarmaCloud
+
+            </span>
+
+
+            <h2>
+
+                Una visión digital para un sector en evolución
+
+            </h2>
+
+
+            <p>
+
+                Nuestra propuesta busca aportar claridad,
+                organización y tecnología al entorno farmacéutico.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+
+            <div class="benefit">
+
+
+                <div class="benefit-check">
+
+                    ✓
+
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+
+                        Organización
+
+                    </h3>
+
+
+                    <p>
+
+                        Información y procesos presentados
+                        de manera estructurada.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="benefit">
+
+
+                <div class="benefit-check">
+
+                    ✓
+
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+
+                        Innovación
+
+                    </h3>
+
+
+                    <p>
+
+                        Una visión orientada al uso responsable
+                        de la tecnología.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="benefit">
+
+
+                <div class="benefit-check">
+
+                    ✓
+
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+
+                        Transparencia
+
+                    </h3>
+
+
+                    <p>
+
+                        Comunicación clara sobre nuestra propuesta
+                        y propósito.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="benefit">
+
+
+                <div class="benefit-check">
+
+                    ✓
+
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+
+                        Evolución
+
+                    </h3>
+
+
+                    <p>
+
+                        Tecnología como herramienta para apoyar
+                        la mejora continua.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     CONTACTO
+========================== -->
+
+<section class="contact"
+         id="contacto">
+
+
+    <div class="container">
+
+
+        <div class="contact-grid">
+
+
+            <div>
+
+
+                <div class="section-heading">
+
+
+                    <span class="section-tag">
+
+                        Contacto
+
+                    </span>
+
+
+                    <h2>
+
+                        Conoce más sobre FarmaCloud
+
+                    </h2>
+
+
+                    <p>
+
+                        Si deseas obtener más información sobre
+                        nuestra propuesta tecnológica, puedes
+                        comunicarte con nosotros.
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="contact-info">
+
+
+                    <div class="contact-info-item">
+
+
+                        <div>
+
+                            <strong>
+
+                                Empresa
+
+                            </strong>
+
+
+                            <span>
+
+                                FarmaCloud
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+
+                        <div>
+
+                            <strong>
+
+                                Correo electrónico
+
+                            </strong>
+
+
+                            <span>
+
+                                contacto@tudominio.com
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+
+                        <div>
+
+                            <strong>
+
+                                Ubicación
+
+                            </strong>
+
+
+                            <span>
+
+                                Colombia
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="contact-box">
+
+
+                <h3>
+
+                    Información importante
+
+                </h3>
+
+
+                <p>
+
+                    Este sitio web tiene carácter informativo
+                    y presenta la propuesta tecnológica de
+                    FarmaCloud.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    La información publicada no constituye
+                    asesoría médica, diagnóstico, tratamiento
+                    ni recomendación clínica.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     INFORMACIÓN LEGAL
+========================== -->
+
+<section class="legal">
+
+
+    <div class="container">
+
+
+        <div class="legal-card"
+             id="privacidad">
+
+
+            <h2>
+
+                Política de Privacidad
+
+            </h2>
+
+
+            <p>
+
+                En FarmaCloud respetamos la privacidad de las
+                personas que visitan este sitio web.
+
+            </p>
+
+
+            <p>
+
+                La información que una persona proporcione
+                voluntariamente mediante los canales de contacto
+                podrá utilizarse para responder solicitudes de
+                información relacionadas con FarmaCloud.
+
+            </p>
+
+
+            <p>
+
+                Este sitio no solicita información médica ni
+                datos sensibles como parte de su contenido
+                informativo.
+
+            </p>
+
+
+            <p>
+
+                La información será tratada de acuerdo con la
+                legislación aplicable y las medidas razonables
+                de seguridad correspondientes.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="legal-card"
+             id="terminos">
+
+
+            <h2>
+
+                Términos y Condiciones
+
+            </h2>
+
+
+            <p>
+
+                El contenido de este sitio web tiene carácter
+                informativo.
+
+            </p>
+
+
+            <p>
+
+                FarmaCloud podrá actualizar, modificar o retirar
+                contenidos cuando sea necesario.
+
+            </p>
+
+
+            <p>
+
+                La información publicada no constituye asesoría
+                médica, diagnóstico, tratamiento ni recomendación
+                clínica.
+
+            </p>
+
+
+            <p>
+
+                El uso de este sitio implica la aceptación de
+                estos términos y condiciones.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="legal-card"
+             id="aviso-legal">
+
+
+            <h2>
+
+                Aviso Legal
+
+            </h2>
+
+
+            <p>
+
+                Este sitio presenta información sobre la propuesta
+                tecnológica de FarmaCloud.
+
+            </p>
+
+
+            <p>
+
+                La información de identificación, contacto y
+                actividad de la entidad responsable debe ser real,
+                verificable y mantenerse actualizada.
+
+            </p>
+
+
+            <p>
+
+                Este sitio tiene carácter informativo y no debe
+                interpretarse como una plataforma de comercio
+                electrónico, un servicio de diagnóstico, un
+                servicio de tratamiento ni un servicio de
+                prescripción médica.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+
+    <div class="container">
+
+
+        <div class="footer-top">
+
+
+            <div class="footer-brand">
+
+
+                <h3>
+
+                    Farma<span>Cloud</span>
+
+                </h3>
+
+
+                <p>
+
+                    Soluciones digitales orientadas a apoyar
+                    la organización y gestión del sector
+                    farmacéutico.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <div class="footer-link-item">
+
+
+                    <a href="#privacidad">
+
+                        Privacidad
+
+                    </a>
+
+
+                    <p>
+
+                        Conoce cómo se gestiona la información
+                        proporcionada por los visitantes del
+                        sitio web.
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="footer-link-item">
+
+
+                    <a href="#terminos">
+
+                        Términos
+
+                    </a>
+
+
+                    <p>
+
+                        Consulta las condiciones aplicables
+                        al uso de este sitio web.
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="footer-link-item">
+
+
+                    <a href="#aviso-legal">
+
+                        Aviso Legal
+
+                    </a>
+
+
+                    <p>
+
+                        Información legal sobre el propósito
+                        y alcance informativo del sitio.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+
+            © 2026 FarmaCloud. Todos los derechos reservados.
+
+
+        </div>
+
+
+    </div>
+
+
+</footer>
+```
+
+</body>
+
+</html>
