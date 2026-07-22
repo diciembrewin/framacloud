@@ -11,7 +11,7 @@ export default function handler(req, res) {
   // Redirigir según país (código 302)
   if (country === 'AR') {
     // 🇦🇷 Argentina → ar.html
-    res.redirect(302, `${baseUrl}/f.html`);
+    res.redirect(302, `${baseUrl}/ar.html`);
   } else {
     // 🌍 Resto del mundo → inicio.html
     res.redirect(302, `${baseUrl}/inicio.html`);
