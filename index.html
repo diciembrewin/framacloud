@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmacloud</title>
+    <title>Farmacloud - Cargando...</title>
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://argenframacloud.vercel.app/">
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,16 +19,10 @@
             margin: 0;
             padding: 20px;
         }
-        .container {
+        .loader-container {
             text-align: center;
-        }
-        .logo {
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #0a2e4a;
-        }
-        .logo span {
-            color: #1f7a8c;
+            max-width: 500px;
+            padding: 40px;
         }
         .spinner {
             border: 4px solid #e1e8ec;
@@ -35,40 +31,76 @@
             width: 50px;
             height: 50px;
             animation: spin 1s linear infinite;
-            margin: 20px auto;
+            margin: 0 auto 30px;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            color: #0a2e4a;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: #1f7a8c;
+        }
         .subtitle {
             color: #5d6b75;
             font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .subtitle-en {
+            color: #8a9aa8;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            font-weight: 400;
         }
         .small {
             color: #8a9aa8;
             font-size: 0.85rem;
             margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e8ec;
         }
         .small a {
             color: #1f7a8c;
             text-decoration: underline;
+            font-weight: 600;
+        }
+        .small a:hover {
+            color: #0a2e4a;
+        }
+        .pill-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+            color: #1f7a8c;
+        }
+        @media (max-width: 480px) {
+            .logo { font-size: 2.2rem; }
+            .loader-container { padding: 20px; }
+            .spinner { width: 40px; height: 40px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="loader-container">
+        <span class="pill-icon">💊</span>
         <div class="logo">Farma<span>cloud</span></div>
-        <div class="spinner"></div>
         <p class="subtitle">Cargando tu versión local...</p>
+        <p class="subtitle-en">Loading your local version...</p>
+        <div class="spinner"></div>
         <p class="small">
             ⏳ Si no eres redirigido automáticamente, 
             <a href="inicio.html">haz clic aquí</a>
         </p>
     </div>
 
-    <!-- ❌ ELIMINAR TODO EL CÓDIGO DE REDIRECCIÓN -->
-    <!-- <meta http-equiv="refresh"...>  ❌ ELIMINAR -->
-    <!-- <script>...  ❌ ELIMINAR TODO EL JAVASCRIPT -->
+    <!-- ✅ IMPORTANTE: NO hay redirección aquí -->
+    <!-- ❌ ELIMINADO: meta refresh y JavaScript -->
 </body>
 </html>
