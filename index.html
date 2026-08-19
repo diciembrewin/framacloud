@@ -1,93 +1,2692 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmacloud - Cargando...</title>
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://argenframacloud.vercel.app/">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #ffffff;
-            color: #1a2633;
-            margin: 0;
-            padding: 20px;
-        }
-        .loader-container {
-            text-align: center;
-            max-width: 500px;
-            padding: 40px;
-        }
-        .spinner {
-            border: 4px solid #e1e8ec;
-            border-top: 4px solid #0a2e4a;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 30px;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .logo {
-            font-size: 2.8rem;
-            font-weight: 900;
-            margin-bottom: 12px;
-            color: #0a2e4a;
-            letter-spacing: -0.5px;
-        }
-        .logo span { color: #1f7a8c; }
-        .subtitle { color: #5d6b75; font-size: 1.1rem; margin-bottom: 5px; }
-        .subtitle-en { color: #8a9aa8; font-size: 0.95rem; margin-bottom: 20px; }
-        .pill-icon { font-size: 3rem; margin-bottom: 15px; display: block; color: #1f7a8c; }
-        @media (max-width: 480px) {
-            .logo { font-size: 2.2rem; }
-            .loader-container { padding: 20px; }
-            .spinner { width: 40px; height: 40px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Farma Nube | Información y tecnología para farmacias</title>
+
+<meta name="description" content="Farma Nube es un sitio web independiente de carácter informativo y educativo sobre tecnología, organización y herramientas digitales relacionadas con el entorno farmacéutico.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://farmanube.vercel.app/">
+
+<meta property="og:title" content="Farma Nube | Información y tecnología para farmacias">
+<meta property="og:description" content="Información general y educativa sobre tecnología, organización y herramientas digitales relacionadas con el entorno farmacéutico.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://farmanube.vercel.app/">
+<meta property="og:site_name" content="Farma Nube">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+
+    --primary:#087f5b;
+    --primary-dark:#056044;
+    --primary-light:#12b886;
+
+    --secondary:#00a878;
+    --secondary-light:#63e6be;
+
+    --accent:#d3f9d8;
+    --accent-strong:#8ce99a;
+
+    --blue:#1971c2;
+    --yellow:#ffd43b;
+    --orange:#ff922b;
+
+    --light:#f3fff9;
+    --light-green:#e9fdf4;
+
+    --white:#ffffff;
+
+    --dark:#12372a;
+    --text:#36564a;
+    --text-light:#61786e;
+
+    --border:#d8eee4;
+
+    --shadow:
+        0 8px 30px rgba(8,127,91,.10);
+
+    --shadow-hover:
+        0 16px 40px rgba(8,127,91,.18);
+
+    --gradient:
+        linear-gradient(
+            135deg,
+            #087f5b 0%,
+            #00a878 50%,
+            #12b886 100%
+        );
+
+    --gradient-soft:
+        linear-gradient(
+            135deg,
+            #e9fdf4 0%,
+            #d3f9d8 100%
+        );
+
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+        'Inter',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Arial,
+        sans-serif;
+
+    color:var(--text);
+
+    background:var(--white);
+
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.container{
+
+    width:min(1120px,92%);
+
+    margin:auto;
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.skip-link{
+
+    position:absolute;
+
+    top:-100px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:
+        0 0 10px 10px;
+
+    z-index:10000;
+
+    font-weight:700;
+}
+
+.skip-link:focus{
+    top:0;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+
+    background:rgba(255,255,255,.97);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+        1px solid var(--border);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:
+        0 3px 20px rgba(0,0,0,.05);
+}
+
+.navbar{
+
+    min-height:76px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+}
+
+.logo{
+
+    font-size:1.8rem;
+
+    font-weight:900;
+
+    color:var(--primary);
+
+    letter-spacing:-.7px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+}
+
+.logo-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:12px;
+
+    background:var(--gradient);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.25rem;
+
+    box-shadow:
+        0 6px 15px rgba(8,127,91,.22);
+}
+
+.logo span:last-child{
+    color:var(--secondary);
+}
+
+.logo:hover{
+    opacity:.9;
+}
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:27px;
+}
+
+nav a{
+
+    color:var(--dark);
+
+    font-size:.94rem;
+
+    font-weight:700;
+
+    position:relative;
+
+    transition:.25s;
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--secondary);
+
+    border-radius:3px;
+
+    transition:.25s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.nav-cta{
+
+    background:var(--primary);
+
+    color:white!important;
+
+    padding:9px 20px;
+
+    border-radius:9px;
+
+    box-shadow:
+        0 5px 15px rgba(8,127,91,.18);
+}
+
+.nav-cta::after{
+    display:none;
+}
+
+.nav-cta:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-2px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    background:var(--gradient);
+
+    color:white;
+
+    padding:125px 0 105px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    right:-180px;
+
+    top:-300px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.12);
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:480px;
+
+    height:480px;
+
+    left:-200px;
+
+    bottom:-280px;
+
+    border-radius:50%;
+
+    background:
+        rgba(99,230,190,.20);
+}
+
+.hero-content{
+
+    max-width:800px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    border:
+        1px solid rgba(255,255,255,.28);
+
+    backdrop-filter:blur(10px);
+
+    padding:9px 20px;
+
+    border-radius:50px;
+
+    font-size:.84rem;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+
+    font-size:
+        clamp(2.7rem,6vw,4.8rem);
+
+    line-height:1.07;
+
+    font-weight:900;
+
+    letter-spacing:-1.5px;
+
+    margin-bottom:25px;
+}
+
+.hero h1 .highlight{
+
+    color:#b2f2bb;
+}
+
+.hero p{
+
+    max-width:720px;
+
+    font-size:1.18rem;
+
+    line-height:1.85;
+
+    opacity:.95;
+
+    margin-bottom:38px;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+}
+
+.button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    padding:15px 28px;
+
+    border-radius:10px;
+
+    font-weight:800;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-family:inherit;
+}
+
+.button-primary{
+
+    background:white;
+
+    color:var(--primary);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.15);
+}
+
+.button-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.22);
+}
+
+.button-secondary{
+
+    background:
+        rgba(255,255,255,.12);
+
+    color:white;
+
+    border:
+        2px solid rgba(255,255,255,.38);
+}
+
+.button-secondary:hover{
+
+    background:
+        rgba(255,255,255,.22);
+
+    transform:translateY(-3px);
+}
+
+.hero-stats{
+
+    display:flex;
+
+    gap:55px;
+
+    margin-top:50px;
+
+    padding-top:35px;
+
+    border-top:
+        1px solid rgba(255,255,255,.25);
+}
+
+.stat{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+}
+
+.stat-number{
+
+    font-size:1.8rem;
+
+    font-weight:900;
+}
+
+.stat-label{
+
+    font-size:.86rem;
+
+    opacity:.82;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+section{
+    padding:90px 0;
+}
+
+.section-header{
+
+    max-width:720px;
+
+    margin-bottom:50px;
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    background:var(--accent);
+
+    color:var(--primary);
+
+    padding:5px 17px;
+
+    border-radius:50px;
+
+    font-size:.78rem;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+}
+
+.section-header h2{
+
+    color:var(--primary-dark);
+
+    font-size:2.55rem;
+
+    line-height:1.2;
+
+    font-weight:900;
+
+    margin-bottom:17px;
+}
+
+.section-header h2 span{
+    color:var(--secondary)!important;
+}
+
+.section-header p{
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+    line-height:1.85;
+}
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.trust-badges{
+
+    background:
+        #ffffff;
+
+    padding:34px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+    border-top:
+        1px solid var(--border);
+}
+
+.badges-grid{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+}
+
+.badge-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--text);
+
+    font-size:.9rem;
+
+    font-weight:700;
+}
+
+.badge-item i{
+
+    color:var(--secondary);
+
+    font-size:1.35rem;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+
+    background:var(--light);
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:30px;
+}
+
+.about-box{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    border:
+        1px solid var(--border);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    box-shadow:
+        0 4px 15px rgba(8,127,91,.04);
+}
+
+.about-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    background:var(--gradient);
+}
+
+.about-box:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-hover);
+}
+
+.icon-wrapper{
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:var(--gradient-soft);
+
+    color:var(--primary);
+
+    font-size:1.55rem;
+
+    margin-bottom:20px;
+}
+
+.about-box h3{
+
+    color:var(--primary-dark);
+
+    font-size:1.35rem;
+
+    margin-bottom:12px;
+}
+
+.about-box p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+}
+
+/* =========================================================
+   TOPICS
+========================================================= */
+
+.solution-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:28px;
+}
+
+.card{
+
+    background:white;
+
+    padding:38px 30px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:18px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-9px);
+
+    box-shadow:var(--shadow-hover);
+
+    border-color:
+        var(--secondary);
+}
+
+.card-number{
+
+    position:absolute;
+
+    top:17px;
+
+    right:22px;
+
+    font-size:3rem;
+
+    font-weight:900;
+
+    color:#e8f8f1;
+}
+
+.card-icon{
+
+    width:64px;
+
+    height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--gradient-soft);
+
+    color:var(--primary);
+
+    border-radius:15px;
+
+    font-size:1.65rem;
+
+    margin-bottom:21px;
+
+    transition:.3s;
+}
+
+.card:hover .card-icon{
+
+    background:var(--gradient);
+
+    color:white;
+
+    transform:scale(1.06);
+}
+
+.card h3{
+
+    color:var(--primary-dark);
+
+    font-size:1.25rem;
+
+    margin-bottom:11px;
+}
+
+.card p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+}
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefits{
+
+    background:var(--light);
+}
+
+.benefits-list{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+}
+
+.benefit{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:17px;
+
+    background:white;
+
+    padding:24px 26px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:15px;
+
+    transition:.3s;
+}
+
+.benefit:hover{
+
+    transform:translateX(6px);
+
+    box-shadow:var(--shadow);
+
+    border-color:
+        var(--secondary);
+}
+
+.icon-check{
+
+    min-width:33px;
+
+    height:33px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    color:white;
+
+    font-size:.85rem;
+}
+
+.benefit p{
+
+    color:var(--text);
+
+    font-weight:600;
+
+    line-height:1.65;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.testimonials{
+
+    background:white;
+}
+
+.testimonials-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:28px;
+}
+
+.testimonial-card{
+
+    padding:32px;
+
+    background:
+        var(--light-green);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:17px;
+
+    transition:.3s;
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+}
+
+.stars{
+
+    color:var(--primary);
+
+    font-size:1.2rem;
+
+    margin-bottom:16px;
+}
+
+.quote{
+
+    font-size:1.05rem;
+
+    color:var(--primary-dark);
+
+    font-weight:800;
+
+    line-height:1.6;
+
+    margin-bottom:12px;
+}
+
+.testimonial-card > p:last-child{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+
+    background:var(--gradient);
+
+    color:white;
+}
+
+.contact .section-header h2,
+.contact .section-header p{
+
+    color:white;
+}
+
+.contact .section-tag{
+
+    background:
+        rgba(255,255,255,.16);
+
+    color:white;
+}
+
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    max-width:850px;
+}
+
+.contact-box{
+
+    background:white;
+
+    color:var(--text);
+
+    padding:42px;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.18);
+}
+
+.contact-box h3{
+
+    color:var(--primary-dark);
+
+    font-size:1.4rem;
+
+    margin-bottom:28px;
+}
+
+.contact-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    margin-bottom:20px;
+}
+
+.contact-icon{
+
+    min-width:42px;
+
+    height:42px;
+
+    border-radius:11px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--accent);
+
+    color:var(--primary);
+
+}
+
+.contact-content{
+
+    flex:1;
+}
+
+.contact-content strong{
+
+    display:block;
+
+    color:var(--primary-dark);
+
+    font-size:.8rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+}
+
+.contact-content span{
+
+    color:var(--text-light);
+
+    display:block;
+}
+
+.contact-divider{
+
+    border:none;
+
+    border-top:
+        2px dashed var(--border);
+
+    margin:25px 0;
+}
+
+/* =========================================================
+   LEGAL
+========================================================= */
+
+.legal{
+
+    background:#f4fbf7;
+}
+
+.legal-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+.legal article{
+
+    background:white;
+
+    padding:32px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:16px;
+
+    transition:.3s;
+}
+
+.legal article:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+}
+
+.legal-icon{
+
+    font-size:1.9rem;
+
+    color:var(--primary);
+
+    margin-bottom:14px;
+}
+
+.legal article h2{
+
+    color:var(--primary-dark);
+
+    font-size:1.25rem;
+
+    margin-bottom:13px;
+}
+
+.legal article p{
+
+    color:var(--text-light);
+
+    font-size:.93rem;
+
+    line-height:1.8;
+
+    margin-bottom:12px;
+}
+
+.legal article p:last-child{
+    margin-bottom:0;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    background:#073b2a;
+
+    color:#d9f5e9;
+
+    padding:58px 0 28px;
+}
+
+.footer-content{
+
+    display:grid;
+
+    grid-template-columns:
+        2fr 3fr;
+
+    gap:50px;
+}
+
+.footer-brand .logo{
+
+    color:white;
+}
+
+.footer-brand .logo span:last-child{
+
+    color:#63e6be;
+}
+
+.footer-brand p{
+
+    color:#a9cfc0;
+
+    max-width:380px;
+
+    margin-top:15px;
+
+    line-height:1.8;
+}
+
+.footer-links{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+.footer-link-item h4{
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+.footer-link-item a{
+
+    display:block;
+
+    color:#a9cfc0;
+
+    padding:4px 0;
+
+    font-size:.92rem;
+
+    transition:.25s;
+}
+
+.footer-link-item a:hover{
+
+    color:#63e6be;
+
+    transform:translateX(3px);
+}
+
+.footer-link-item p{
+
+    color:#a9cfc0;
+
+    font-size:.88rem;
+
+    line-height:1.7;
+
+    margin-bottom:5px;
+}
+
+.footer-bottom{
+
+    border-top:
+        1px solid rgba(255,255,255,.12);
+
+    margin-top:45px;
+
+    padding-top:23px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.footer-bottom p{
+
+    color:#86b3a2;
+
+    font-size:.86rem;
+}
+
+.footer-legal-links{
+
+    display:flex;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+}
+
+.footer-legal-links a{
+
+    color:#86b3a2;
+
+    font-size:.84rem;
+
+    transition:.25s;
+}
+
+.footer-legal-links a:hover{
+    color:#63e6be;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1024px){
+
+    .testimonials-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .footer-content{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        padding:80px 0 65px;
+    }
+
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    .hero-stats{
+        gap:28px;
+
+        flex-wrap:wrap;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .section-header h2{
+        font-size:2.05rem;
+    }
+
+    .about-grid,
+    .solution-grid,
+    .benefits-list,
+    .testimonials-grid,
+    .legal-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .badges-grid{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .footer-links{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:480px){
+
+    .container{
+        width:90%;
+    }
+
+    .logo{
+        font-size:1.45rem;
+    }
+
+    .logo-icon{
+        width:37px;
+        height:37px;
+    }
+
+    .hero{
+        padding:62px 0 48px;
+    }
+
+    .hero h1{
+        font-size:1.9rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .button{
+        width:100%;
+    }
+
+    .hero-stats{
+        gap:22px;
+    }
+
+    .stat-number{
+        font-size:1.45rem;
+    }
+
+    .about-box,
+    .card,
+    .contact-box,
+    .legal article{
+        padding:25px;
+    }
+
+    .benefit{
+        padding:19px;
+    }
+
+    .footer-links{
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .footer-legal-links{
+        justify-content:center;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
-    <div class="loader-container">
-        <span class="pill-icon">💊</span>
-        <div class="logo">Farma</div>
-        <p class="subtitle">Cargando</p>
-        <p class="subtitle-en">Loading...</p>
-        <div class="spinner"></div>
+
+<a class="skip-link" href="#inicio">
+    Saltar al contenido principal
+</a>
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#inicio"
+   class="logo"
+   aria-label="Farma Nube - Inicio">
+
+    <span class="logo-icon">
+        <i class="fas fa-cloud"></i>
+    </span>
+
+    Farma <span>Nube</span>
+
+</a>
+
+<nav aria-label="Navegación principal">
+
+    <a href="#nosotros">
+        Nosotros
+    </a>
+
+    <a href="#temas">
+        Temas
+    </a>
+
+    <a href="#beneficios">
+        Información
+    </a>
+
+    <a href="#preguntas">
+        Preguntas
+    </a>
+
+    <a href="#contacto">
+        Contacto
+    </a>
+
+    <a href="#legal" class="nav-cta">
+        Información legal
+    </a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero" id="inicio">
+
+<div class="container hero-content">
+
+    <div class="hero-badge">
+
+        <i class="fas fa-circle-info"></i>
+
+        Sitio de carácter informativo
+
     </div>
 
-    <!-- ✅ REDIRECCIÓN CON JAVASCRIPT -->
-    <script>
-        // Función para redirigir según país
-        function redirigirPorPais(pais) {
-            if (pais === 'AR') {
-                window.location.href = 'ar.html';
-            } else {
-                window.location.href = 'inicio.html';
-            }
-        }
+    <h1>
 
-        // Intentar detectar país con ipapi.co
-        fetch('https://ipapi.co/json/')
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                console.log('País detectado:', data.country);
-                redirigirPorPais(data.country);
-            })
-            .catch(function(error) {
-                console.log('Error detectando país, redirigiendo a inicio.html');
-                window.location.href = 'inicio.html';
-            });
-    </script>
+        Información y tecnología para el entorno de las
+
+        <span class="highlight">
+            farmacias
+        </span>
+
+    </h1>
+
+    <p>
+
+        Farma Nube presenta información general y educativa
+        sobre herramientas digitales, organización de información,
+        procesos tecnológicos y tendencias relacionadas con
+        el entorno farmacéutico.
+
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="#temas"
+           class="button button-primary">
+
+            <i class="fas fa-book-open"></i>
+
+            Explorar información
+
+        </a>
+
+        <a href="#nosotros"
+           class="button button-secondary">
+
+            <i class="fas fa-circle-info"></i>
+
+            Conocer Farma Nube
+
+        </a>
+
+    </div>
+
+    <div class="hero-stats">
+
+        <div class="stat">
+
+            <span class="stat-number">
+                <i class="fas fa-cloud"></i>
+            </span>
+
+            <span class="stat-label">
+                Contenido digital
+            </span>
+
+        </div>
+
+        <div class="stat">
+
+            <span class="stat-number">
+                <i class="fas fa-book"></i>
+            </span>
+
+            <span class="stat-label">
+                Información general
+            </span>
+
+        </div>
+
+        <div class="stat">
+
+            <span class="stat-number">
+                <i class="fas fa-shield-halved"></i>
+            </span>
+
+            <span class="stat-label">
+                Enfoque responsable
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     TRUST
+====================================================== -->
+
+<section class="trust-badges">
+
+<div class="container">
+
+<div class="badges-grid">
+
+    <div class="badge-item">
+
+        <i class="fas fa-circle-info"></i>
+
+        <span>
+            Contenido informativo
+        </span>
+
+    </div>
+
+    <div class="badge-item">
+
+        <i class="fas fa-laptop"></i>
+
+        <span>
+            Tecnología y organización
+        </span>
+
+    </div>
+
+    <div class="badge-item">
+
+        <i class="fas fa-mobile-screen"></i>
+
+        <span>
+            Consulta desde cualquier dispositivo
+        </span>
+
+    </div>
+
+    <div class="badge-item">
+
+        <i class="fas fa-user-shield"></i>
+
+        <span>
+            Sin asesoría médica
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     NOSOTROS
+====================================================== -->
+
+<section class="about"
+         id="nosotros"
+         aria-labelledby="about-title">
+
+<div class="container">
+
+<div class="section-header">
+
+    <span class="section-tag">
+        Sobre Farma Nube
+    </span>
+
+    <h2 id="about-title">
+
+        Información sobre tecnología y organización
+
+    </h2>
+
+    <p>
+
+        Farma Nube es un sitio web independiente de carácter
+        informativo y educativo. Su objetivo es presentar
+        información general sobre tecnología, organización
+        de información, herramientas digitales y procesos
+        relacionados con el entorno farmacéutico.
+
+    </p>
+
+</div>
+
+
+<div class="about-grid">
+
+<article class="about-box">
+
+    <div class="icon-wrapper">
+        <i class="fas fa-lightbulb"></i>
+    </div>
+
+    <h3>
+        Propósito informativo
+    </h3>
+
+    <p>
+
+        Publicar contenido claro y accesible sobre conceptos
+        tecnológicos y organizativos que pueden encontrarse
+        en el entorno de las farmacias.
+
+    </p>
+
+</article>
+
+
+<article class="about-box">
+
+    <div class="icon-wrapper">
+        <i class="fas fa-magnifying-glass"></i>
+    </div>
+
+    <h3>
+        Información general
+    </h3>
+
+    <p>
+
+        Los contenidos se presentan con fines educativos
+        e informativos y no sustituyen la evaluación,
+        orientación o atención de profesionales cualificados.
+
+    </p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     TEMAS
+====================================================== -->
+
+<section id="temas"
+         aria-labelledby="topics-title">
+
+<div class="container">
+
+<div class="section-header">
+
+    <span class="section-tag">
+        Temas
+    </span>
+
+    <h2 id="topics-title">
+
+        Principales temas de
+
+        <span>
+            Farma Nube
+        </span>
+
+    </h2>
+
+    <p>
+
+        El sitio reúne información general sobre diferentes
+        áreas relacionadas con la tecnología y la organización
+        digital en el entorno farmacéutico.
+
+    </p>
+
+</div>
+
+
+<div class="solution-grid">
+
+
+<article class="card">
+
+    <span class="card-number">
+        01
+    </span>
+
+    <div class="card-icon">
+        <i class="fas fa-boxes-stacked"></i>
+    </div>
+
+    <h3>
+        Organización de información
+    </h3>
+
+    <p>
+
+        Conceptos sobre clasificación, organización,
+        seguimiento y gestión de información dentro
+        de entornos relacionados con farmacias.
+
+    </p>
+
+</article>
+
+
+<article class="card">
+
+    <span class="card-number">
+        02
+    </span>
+
+    <div class="card-icon">
+        <i class="fas fa-chart-line"></i>
+    </div>
+
+    <h3>
+        Procesos digitales
+    </h3>
+
+    <p>
+
+        Información general sobre cómo las herramientas
+        digitales pueden ayudar a estructurar información
+        y organizar determinadas tareas administrativas.
+
+    </p>
+
+</article>
+
+
+<article class="card">
+
+    <span class="card-number">
+        03
+    </span>
+
+    <div class="card-icon">
+        <i class="fas fa-cloud"></i>
+    </div>
+
+    <h3>
+        Tecnología en la nube
+    </h3>
+
+    <p>
+
+        Información general sobre almacenamiento,
+        acceso remoto, respaldo y conceptos básicos
+        relacionados con servicios digitales en la nube.
+
+    </p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     INFORMACIÓN
+====================================================== -->
+
+<section class="benefits"
+         id="beneficios"
+         aria-labelledby="benefits-title">
+
+<div class="container">
+
+<div class="section-header">
+
+    <span class="section-tag">
+        Información
+    </span>
+
+    <h2 id="benefits-title">
+
+        ¿Qué puedes encontrar en
+
+        <span>
+            Farma Nube
+        </span>?
+
+    </h2>
+
+    <p>
+
+        El sitio está pensado como una fuente de consulta
+        general sobre tecnología y organización, sin convertir
+        la información publicada en asesoría profesional.
+
+    </p>
+
+</div>
+
+
+<div class="benefits-list">
+
+
+<div class="benefit">
+
+    <span class="icon-check">
+        <i class="fas fa-check"></i>
+    </span>
+
+    <p>
+        Explicaciones sencillas sobre conceptos tecnológicos
+        aplicados al entorno farmacéutico.
+    </p>
+
+</div>
+
+
+<div class="benefit">
+
+    <span class="icon-check">
+        <i class="fas fa-check"></i>
+    </span>
+
+    <p>
+        Información general sobre organización y digitalización
+        de procesos.
+    </p>
+
+</div>
+
+
+<div class="benefit">
+
+    <span class="icon-check">
+        <i class="fas fa-check"></i>
+    </span>
+
+    <p>
+        Contenido educativo sobre herramientas digitales
+        y servicios en la nube.
+    </p>
+
+</div>
+
+
+<div class="benefit">
+
+    <span class="icon-check">
+        <i class="fas fa-check"></i>
+    </span>
+
+    <p>
+        Material de consulta para comprender mejor la
+        transformación digital del sector.
+    </p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     PREGUNTAS FRECUENTES
+====================================================== -->
+
+<section class="testimonials"
+         id="preguntas"
+         aria-labelledby="questions-title">
+
+<div class="container">
+
+<div class="section-header">
+
+    <span class="section-tag">
+        Preguntas frecuentes
+    </span>
+
+    <h2 id="questions-title">
+
+        Información
+
+        <span>
+            importante
+        </span>
+
+    </h2>
+
+    <p>
+        Algunas aclaraciones sobre la finalidad de Farma Nube.
+    </p>
+
+</div>
+
+
+<div class="testimonials-grid">
+
+
+<article class="testimonial-card">
+
+    <div class="stars">
+        <i class="fas fa-circle-question"></i>
+    </div>
+
+    <p class="quote">
+        ¿Farma Nube vende medicamentos?
+    </p>
+
+    <p>
+
+        No. Farma Nube es un sitio de carácter informativo
+        y no funciona como farmacia, tienda de medicamentos
+        ni plataforma de comercio electrónico.
+
+    </p>
+
+</article>
+
+
+<article class="testimonial-card">
+
+    <div class="stars">
+        <i class="fas fa-user-doctor"></i>
+    </div>
+
+    <p class="quote">
+        ¿La información sustituye una consulta profesional?
+    </p>
+
+    <p>
+
+        No. Los contenidos no constituyen diagnóstico,
+        tratamiento, prescripción ni asesoría médica
+        o farmacéutica.
+
+    </p>
+
+</article>
+
+
+<article class="testimonial-card">
+
+    <div class="stars">
+        <i class="fas fa-laptop-code"></i>
+    </div>
+
+    <p class="quote">
+        ¿Cuál es el enfoque del sitio?
+    </p>
+
+    <p>
+
+        El enfoque es divulgar información general sobre
+        tecnología, organización y procesos digitales
+        relacionados con el entorno farmacéutico.
+
+    </p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACTO
+====================================================== -->
+
+<section class="contact"
+         id="contacto"
+         aria-labelledby="contact-title">
+
+<div class="container">
+
+<div class="section-header">
+
+    <span class="section-tag">
+        Contacto
+    </span>
+
+    <h2 id="contact-title">
+
+        Contacta con
+
+        <span style="color:#b2f2bb">
+            Farma Nube
+        </span>
+
+    </h2>
+
+    <p>
+
+        Farma Nube es un sitio web de carácter informativo.
+        Actualmente no dispone de una dirección física ni
+        de atención presencial. Las consultas relacionadas
+        con el contenido del sitio se realizan exclusivamente
+        mediante los canales de contacto habilitados en esta página.
+
+    </p>
+
+</div>
+
+
+<div class="contact-wrapper">
+
+<div class="contact-box">
+
+    <h3>
+
+        <i class="fas fa-circle-info"
+           style="color:var(--secondary);margin-right:10px">
+        </i>
+
+        Información de contacto
+
+    </h3>
+
+
+    <div class="contact-item">
+
+        <div class="contact-icon">
+            <i class="fas fa-globe"></i>
+        </div>
+
+        <div class="contact-content">
+
+            <strong>
+                Sitio web
+            </strong>
+
+            <span>
+                farmanube.vercel.app
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="contact-item">
+
+        <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+        </div>
+
+        <div class="contact-content">
+
+            <strong>
+                Canal de contacto
+            </strong>
+
+            <span>
+                Exclusivamente mediante el sitio web.
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="contact-item">
+
+        <div class="contact-icon">
+            <i class="fas fa-location-dot"></i>
+        </div>
+
+        <div class="contact-content">
+
+            <strong>
+                Dirección física
+            </strong>
+
+            <span>
+                Farma Nube no dispone actualmente
+                de una dirección física de atención.
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <hr class="contact-divider">
+
+
+    <div class="contact-item">
+
+        <div class="contact-icon">
+            <i class="fas fa-shield-halved"></i>
+        </div>
+
+        <div class="contact-content">
+
+            <strong>
+                Finalidad
+            </strong>
+
+            <span>
+                Información general y educativa.
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <hr class="contact-divider">
+
+
+    <p style="
+        color:var(--text-light);
+        font-size:.9rem;
+        line-height:1.7;
+    ">
+
+        <i class="fas fa-triangle-exclamation"
+           style="color:var(--secondary);margin-right:8px">
+        </i>
+
+        Farma Nube no vende medicamentos, no ofrece
+        consultas médicas, no realiza diagnósticos y no
+        sustituye la atención de profesionales cualificados.
+
+    </p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     LEGAL
+====================================================== -->
+
+<section class="legal"
+         id="legal"
+         aria-labelledby="legal-title">
+
+<div class="container">
+
+<div class="section-header">
+
+    <span class="section-tag">
+        Información legal
+    </span>
+
+    <h2 id="legal-title">
+
+        Transparencia y uso del sitio
+
+    </h2>
+
+    <p>
+
+        Información sobre la finalidad, alcance y condiciones
+        generales de utilización de Farma Nube.
+
+    </p>
+
+</div>
+
+
+<div class="legal-grid">
+
+
+<article>
+
+    <div class="legal-icon">
+        <i class="fas fa-shield-halved"></i>
+    </div>
+
+    <h2>
+        Privacidad
+    </h2>
+
+    <p>
+
+        Farma Nube procura respetar la privacidad de sus
+        visitantes. El sitio no solicita información médica
+        para acceder o consultar sus contenidos.
+
+    </p>
+
+    <p>
+
+        Cualquier información proporcionada voluntariamente
+        mediante los canales de contacto disponibles será
+        utilizada para atender la consulta correspondiente.
+
+    </p>
+
+</article>
+
+
+<article>
+
+    <div class="legal-icon">
+        <i class="fas fa-file-contract"></i>
+    </div>
+
+    <h2>
+        Términos y condiciones
+    </h2>
+
+    <p>
+
+        El contenido publicado en Farma Nube tiene carácter
+        general, educativo e informativo.
+
+    </p>
+
+    <p>
+
+        La información no constituye diagnóstico, tratamiento,
+        prescripción, recomendación clínica ni asesoría
+        profesional.
+
+    </p>
+
+    <p>
+
+        Los visitantes deben utilizar la información de manera
+        responsable y acudir a profesionales cualificados
+        cuando necesiten asesoramiento específico.
+
+    </p>
+
+</article>
+
+
+<article>
+
+    <div class="legal-icon">
+        <i class="fas fa-circle-exclamation"></i>
+    </div>
+
+    <h2>
+        Aviso informativo
+    </h2>
+
+    <p>
+
+        Farma Nube no es una farmacia, no comercializa
+        medicamentos y no permite realizar compras de
+        productos farmacéuticos desde este sitio.
+
+    </p>
+
+    <p>
+
+        Farma Nube tampoco proporciona consultas médicas
+        o farmacéuticas, diagnósticos ni tratamientos.
+
+    </p>
+
+</article>
+
+
+<article>
+
+    <div class="legal-icon">
+        <i class="fas fa-address-book"></i>
+    </div>
+
+    <h2>
+        Contacto
+    </h2>
+
+    <p>
+
+        Farma Nube no dispone actualmente de una dirección
+        física ni de atención presencial.
+
+    </p>
+
+    <p>
+
+        Las consultas relacionadas con el sitio y sus
+        contenidos se realizan exclusivamente mediante
+        los canales de contacto habilitados en esta página.
+
+    </p>
+
+</article>
+
+
+<article>
+
+    <div class="legal-icon">
+        <i class="fas fa-building"></i>
+    </div>
+
+    <h2>
+        Identidad del sitio
+    </h2>
+
+    <p>
+
+        Farma Nube es un sitio web independiente dedicado
+        a la publicación de información general sobre
+        tecnología y organización relacionada con el
+        entorno farmacéutico.
+
+    </p>
+
+    <p>
+
+        El sitio no afirma representar ni estar afiliado
+        a farmacias, fabricantes, instituciones sanitarias,
+        entidades gubernamentales u otras marcas salvo que
+        dicha relación sea expresamente indicada.
+
+    </p>
+
+</article>
+
+
+<article>
+
+    <div class="legal-icon">
+        <i class="fas fa-laptop"></i>
+    </div>
+
+    <h2>
+        Naturaleza del contenido
+    </h2>
+
+    <p>
+
+        Los contenidos pueden actualizarse, modificarse
+        o ampliarse con el objetivo de mantener una
+        presentación clara y útil para los visitantes.
+
+    </p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-content">
+
+
+<div class="footer-brand">
+
+    <div class="logo">
+
+        <span class="logo-icon">
+            <i class="fas fa-cloud"></i>
+        </span>
+
+        Farma <span>Nube</span>
+
+    </div>
+
+    <p>
+
+        Sitio web independiente de carácter informativo
+        sobre tecnología, organización y herramientas
+        digitales relacionadas con el entorno farmacéutico.
+
+    </p>
+
+</div>
+
+
+<div class="footer-links">
+
+
+<div class="footer-link-item">
+
+    <h4>
+        Navegación
+    </h4>
+
+    <a href="#inicio">
+        Inicio
+    </a>
+
+    <a href="#nosotros">
+        Sobre Farma Nube
+    </a>
+
+    <a href="#temas">
+        Temas
+    </a>
+
+    <a href="#beneficios">
+        Información
+    </a>
+
+</div>
+
+
+<div class="footer-link-item">
+
+    <h4>
+        Sitio
+    </h4>
+
+    <a href="#preguntas">
+        Preguntas frecuentes
+    </a>
+
+    <a href="#contacto">
+        Contacto
+    </a>
+
+    <a href="#legal">
+        Información legal
+    </a>
+
+</div>
+
+
+<div class="footer-link-item">
+
+    <h4>
+        Finalidad
+    </h4>
+
+    <p>
+        Contenido informativo y educativo.
+    </p>
+
+    <p>
+        No es una farmacia.
+    </p>
+
+    <p>
+        No vende medicamentos.
+    </p>
+
+    <p>
+        No ofrece asesoría médica.
+    </p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    <p>
+        &copy;
+        <span id="year"></span>
+        Farma Nube. Todos los derechos reservados.
+    </p>
+
+    <div class="footer-legal-links">
+
+        <a href="#legal">
+            Privacidad
+        </a>
+
+        <a href="#legal">
+            Términos
+        </a>
+
+        <a href="#legal">
+            Aviso informativo
+        </a>
+
+        <a href="#contacto">
+            Contacto
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
 </body>
 </html>
