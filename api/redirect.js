@@ -6,7 +6,7 @@ export default function handler(req, res) {
   const country = req.headers['x-vercel-ip-country'] || 'US';
   
   // URL base de tu sitio
-  const baseUrl = 'https://argenframacloud.vercel.app';
+  const baseUrl = 'https://framanub.vercel.app';
   
   // Redirigir según país (código 302)
   if (country === 'AR') {
